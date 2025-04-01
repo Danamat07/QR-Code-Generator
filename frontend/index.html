@@ -14,8 +14,11 @@
             <input type="text" id="text-input" placeholder="Enter URL or text">
             <button onclick="generateQR()">Generate QR Code</button>
             <br>
-            <img id="qr-image" style="display: none;">
-        </div>
+            <div id="qr-container">
+                <img id="qr-image">
+            </div>
+            <button id="download-btn" style="display: none;" onclick="downloadQR()">Download QR Code</button>
+        </div>        
         <script src="script.js"></script>
     </body>
 

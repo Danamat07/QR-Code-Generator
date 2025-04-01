@@ -1,41 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     background: linear-gradient(135deg, #74ebd5, #acb6e5);
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .container {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
+    max-width: 90%;
+    width: 400px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     animation: fadeIn 0.8s ease-in-out;
 }
 
 h1 {
     font-weight: 600;
     color: #333;
+    font-size: 1.5rem;
 }
 
 input {
     padding: 12px;
-    width: 85%;
-    margin: 10px;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
     border: 2px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
@@ -49,7 +55,7 @@ input:focus {
 }
 
 button {
-    padding: 12px 25px;
+    padding: 12px 20px;
     background: linear-gradient(135deg, #74ebd5, #acb6e5);
     color: white;
     font-size: 16px;
@@ -59,6 +65,8 @@ button {
     transition: 0.3s ease-in-out;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
@@ -72,6 +80,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 #qr-image {
@@ -80,17 +89,8 @@ button:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     display: none;
     animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    width: 200px;
+    height: auto;
 }
 
 #download-btn {
@@ -105,6 +105,8 @@ button:hover {
     transition: 0.3s ease-in-out;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
+    max-width: 200px;
     display: none;
 }
 
@@ -114,3 +116,40 @@ button:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #qr-image {
+        width: 150px;
+    }
+}

@@ -79,7 +79,8 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 100%;
 }
 
@@ -152,4 +153,9 @@ button:hover {
     #qr-image {
         width: 150px;
     }
+}
+
+.footer{
+    font-size: 12px;
+    margin-top: 15px;
 }

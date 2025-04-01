@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QR Code Generator</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     </head>
 
     <body>
@@ -18,7 +19,12 @@
                 <img id="qr-image">
             </div>
             <button id="download-btn" style="display: none;" onclick="downloadQR()">Download QR Code</button>
-        </div>        
+            <div class="footer">
+                <p class="copyright">
+                    Copyright © 2025 - Dana-Maria Matei | All Rights Reserved
+                </p>  
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 
